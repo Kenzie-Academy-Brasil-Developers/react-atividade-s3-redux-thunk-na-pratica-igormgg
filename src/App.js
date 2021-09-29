@@ -1,11 +1,14 @@
 import "./reset.css";
 import "./App.css";
+import Display from "./Components/Display";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">Redux Thunk na Prática</header>
-      <main></main>
+      <main>
+        <Display />
+      </main>
     </div>
   );
 }
