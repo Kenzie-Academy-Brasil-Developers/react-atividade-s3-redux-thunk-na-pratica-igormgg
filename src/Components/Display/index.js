@@ -27,7 +27,7 @@ const Display = () => {
           onChange={(event) => setComment(event.target.value)}
           type="text"
         />
-        <button onClick={() => handleClick()}>Novo Comentário</button>
+        <button onClick={handleClick}>Novo Comentário</button>
       </div>
     </div>
   );
