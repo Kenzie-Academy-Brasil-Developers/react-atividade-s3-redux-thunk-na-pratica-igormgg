@@ -4,14 +4,16 @@ import { addCommentThunk } from "../../store/modules/user/thunks";
 import "./styles.css";
 
 const Display = () => {
-  const [comment, setComment] = useState("");
-  const dispatch = useDispatch;
+  const [comment, setComment] = useState(false);
+  const dispatch = useDispatch();
   const commentsObj = useSelector((state) => state.user);
   const comments = commentsObj.comments;
 
   const handleClick = () => {
-    dispatch(addCommentThunk(comment));
-    setComment("");
+    if (comment) {
+      dispatch(addCommentThunk(comment));
+    }
+    setComment(false);
   };
 
   return (
