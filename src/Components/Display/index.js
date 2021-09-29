@@ -15,13 +15,20 @@ const Display = () => {
   };
 
   return (
-    <div className="commentsBox">
+    <div className="commentsContainer">
       <h2>{commentsObj.name}</h2>
-      {comments.map((cmt) => {
-        return <span>{cmt}</span>;
-      })}
-      <input onChange={(event) => setComment(event.target.value)} type="text" />
-      <button onClick={() => handleClick()}>Novo Comentário</button>
+      <div className="commentsBox">
+        {comments.map((cmt) => {
+          return <span>{cmt}</span>;
+        })}
+      </div>
+      <div className="inputBox">
+        <input
+          onChange={(event) => setComment(event.target.value)}
+          type="text"
+        />
+        <button onClick={() => handleClick()}>Novo Comentário</button>
+      </div>
     </div>
   );
 };
